@@ -25,12 +25,12 @@
 -   `Name`  
 -   `Transported` 
 
-Пример:
-<code>['0001_01', 'Europa', True, 'B/0/P', 'TRAPPIST-1e', '39.0', True, 0.0, 0.0, 0.0, '0.0', '0.0', 'Maham Ofracculy', True]</code>
+Пример:\
+`['0001_01', 'Europa', True, 'B/0/P', 'TRAPPIST-1e', '39.0', True, 0.0, 0.0, 0.0, '0.0', '0.0', 'Maham Ofracculy', True]`
 
-PassengerId - 0001_01
-HomePlanet - Europa
-CryoSleep - True
+PassengerId - 0001_01\
+HomePlanet - Europa\
+CryoSleep - True\
 ...
 
 Для каждого задания создана отдельная папка в папке tasks
