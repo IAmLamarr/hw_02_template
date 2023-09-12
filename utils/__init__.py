@@ -16,7 +16,7 @@ def deserialize(row):
     imputed_values = list(map(impute_value, row.split(",")))
     cast_dict = {
         "bool": [2, -1, 6],
-        "float": range(7, 10),
+        "float": [5] + list(range(7, 12)),
     }
     for key in cast_dict.keys():
         indxs = cast_dict[key]
