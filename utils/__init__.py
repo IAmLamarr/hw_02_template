@@ -12,7 +12,7 @@ def cast_value(value, cast_func):
     return eval(cast_func)(value)
 
 
-def deserialise(row):
+def deserialize(row):
     imputed_values = list(map(impute_value, row.split(",")))
     cast_dict = {
         "bool": [2, -1, 6],
@@ -31,4 +31,4 @@ def get_data():
     with open(path) as data_file:
         next(data_file)
 
-        return [deserialise(line) for line in data_file]
+        return [deserialize(line) for line in data_file]
