@@ -1,3 +1,5 @@
+import os
+
 def impute_value(value):
     if value == "":
         return None
@@ -25,7 +27,8 @@ def deserialise(row):
 
 
 def get_data():
-    with open("./utils/data.csv") as data_file:
+    path = os.path.join(os.path.dirname(__file__), 'data.csv')
+    with open(path) as data_file:
         next(data_file)
 
         return [deserialise(line) for line in data_file]

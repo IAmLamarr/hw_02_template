@@ -1,5 +1,7 @@
 # Шаблонный код, не трогать!
-from utils.index import get_data
+import sys
+sys.path.append('../../..')
+from utils import get_data
 
 data = get_data()
 # Писать решение тут
