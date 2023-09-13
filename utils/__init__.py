@@ -9,14 +9,14 @@ def impute_value(value):
 def cast_value(value, cast_func):
     if value is None:
         return None
-    return eval(cast_func)(value)
+    return eval(cast_func, {"x": value})
 
 
 def deserialize(row):
     imputed_values = list(map(impute_value, row.split(",")))
     cast_dict = {
-        "bool": [2, -1, 6],
-        "float": [5] + list(range(7, 12)),
+        "True if x == 'True' else False": [2, -1, 6],
+        "float(x)": [5] + list(range(7, 12)),
     }
     for key in cast_dict.keys():
         indxs = cast_dict[key]
